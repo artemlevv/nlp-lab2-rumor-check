@@ -1,0 +1,59 @@
+[
+  {
+    "id": "true-fact",
+    "text": "The Eiffel Tower is in Paris.",
+    "expected_kind": "factual_claim",
+    "expected_verdict": "supported",
+    "notes": "Well-known fact Wikipedia should confirm."
+  },
+  {
+    "id": "false-fact",
+    "text": "The Eiffel Tower is in Berlin.",
+    "expected_kind": "factual_claim",
+    "expected_verdict": "refuted",
+    "notes": "Same entity, wrong city."
+  },
+  {
+    "id": "uk-fact",
+    "text": "Київ є столицею України.",
+    "expected_kind": "factual_claim",
+    "expected_verdict": "supported",
+    "notes": "Ukrainian factual claim."
+  },
+  {
+    "id": "opinion",
+    "text": "Pineapple on pizza is the best food ever invented.",
+    "expected_kind": "opinion",
+    "expected_verdict": "not_checkable",
+    "notes": "Taste, not a public fact. Search should be skipped."
+  },
+  {
+    "id": "wild-rumor",
+    "text": "The Great Wall of China is visible from the Moon with the naked eye.",
+    "expected_kind": "factual_claim",
+    "expected_verdict": "refuted",
+    "notes": "Classic myth. Public sources describe it as not visible from the Moon."
+  },
+  {
+    "id": "greeting",
+    "text": "hey, can you help me later?",
+    "expected_kind": "not_a_claim",
+    "expected_verdict": "not_checkable",
+    "notes": "No assertion at all."
+  },
+  {
+    "id": "satire-onion",
+    "text": "Area Man Finally Understands The Economy After Reading One Tweet, Experts Warn Markets May Never Recover.",
+    "expected_kind": "satire",
+    "expected_verdict": "not_checkable",
+    "notes": "Onion-style satire. Should not be treated as a real news story."
+  },
+  {
+    "id": "reprint-echo",
+    "text": "Китай отказал Украине в отсрочке по долгу в 30,8 млрд долларов",
+    "expected_kind": "factual_claim",
+    "expected_verdict": "insufficient",
+    "expect_fail": true,
+    "notes": "The same rumour is copied across many sites. The system treats reprints as independent confirmation and often returns supported."
+  }
+]
